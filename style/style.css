@@ -53,7 +53,7 @@ body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
 }
 
-.input-add input {
+.input-name-people {
     width: 70%;
     height: 46px;
     text-align: center;
@@ -66,16 +66,16 @@ body {
     margin-right: 20px;
 }
 
-.input-add input::placeholder {
+.input-name-people::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.input-add input:focus {
+.input-name-people:focus {
     border: 1px solid rgb(2, 2, 32);
     background-color: rgba(151, 144, 144, 0.171);
 }
 
-.input-add button {
+.button-add-participant {
     font-size: 15px;
     padding: 15px 20px;
     border: none;
@@ -85,12 +85,14 @@ body {
     transition: transform 0.5s;
 }
 
-.input-add button:hover {
+.button-add-participant:hover {
     background-color: rgb(143, 5, 33);
     transform: scale(1.05);
 }
 
 .participants-container {
+    color: #FFF;
+    font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -100,7 +102,7 @@ body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.generate-winner {
+.button-generate-winner {
     font-size: 15px;
     padding: 15px 20px;
     border: none;
@@ -110,8 +112,20 @@ body {
     transition: transform 0.7s;
 }
 
-.generate-winner:hover {
+.button-generate-winner:hover {
     background-color: rgb(37, 128, 25);
     box-shadow: 0px 5px 30px 10px rgba(45, 117, 16, 0.596);
     transform: scale(1.03);
+}
+
+
+/* Utilites */
+
+.error{
+    border: 2px solid red;
+    font-style: italic;
+}
+
+.error::placeholder {
+    color: rgba(59, 9, 9, 0.849);
 }

@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de sorteio</title>
-    <link rel="stylesheet" href="./style/style.css">
-</head>
-<body>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de sorteio</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
     <div class="page-container">
         <h1 class="title-page">Página de sorteio</h1>
         <p class="text-page">Adiciones os nomes para sortear o ganhador</p>
         <div class="input-add">
-            <input type="text"
-            placeholder="Adiciones os participantes...">
-            <button class="add-participant">Adicionar</button>
+            <input type="text" placeholder="Adiciones os participantes..." class="input-name-people" />
+            <button class="button-add-participant">Adicionar</button>
         </div>
         <div class="participants-container"></div>
-        <button class="generate-winner">Gerar Vencedor</button>
+        <button class="button-generate-winner">Gerar Vencedor</button>
     </div>
 
     <script src="./javascript/scripts.js"></script>
 </body>
+
 </html>
+<!-- <div class="participant-content">
+    <p class="name-participant">Hiago</p>
+    <i class='bx bxs-trash-alt'></i>
+</div> -->
