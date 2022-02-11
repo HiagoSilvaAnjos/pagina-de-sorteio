@@ -1,6 +1,8 @@
 const inputElement = document.querySelector('.input-name-people');
 const buttonElement = document.querySelector('.button-add-participant');
 const elementDivContainer = document.querySelector('.participants-container');
+const buttonGenerateWinner = document.querySelector('.button-generate-winner');
+const loadingDiv = document.querySelector('.loading');
 
 // Validação do input
 const validateInput = () => inputElement.value.trim().length > 0;
@@ -13,7 +15,7 @@ const isValidIpunt = () => {
         return inputElement.classList.add('error');
     }
 
-    console.log(inputElement.value)
+    console.log(inputElement.value);
 
     // Adicionar div
 
@@ -41,25 +43,27 @@ const isValidIpunt = () => {
 
     inputElement.value = "";
 
+    console.log(`O tamanho do array é ${elementDivContainer.childNodes.length}`);
+    console.log(elementDivContainer.childNodes);
+
+
     // Remover participante
-    deleteIcon.addEventListener("click", () => removeParticipant(participantsContainer, participantContent))
+    deleteIcon.addEventListener("click", () => removeParticipant(participantsContainer, participantContent));
 
 
     const removeParticipant = (participantsContainer, participantContent) => {
-        const participants = elementDivContainer.childNodes
+        const participants = elementDivContainer.childNodes;
 
         for (const participantElement of participants) {
 
             const validateClickButton = participantElement.firstChild === participantContent;
 
             if (validateClickButton) {
-                participantsContainer.remove()
+                participantsContainer.remove();
             }
         }
 
     }
-
-    // Gerar vencedor
 
 }
 
@@ -71,5 +75,32 @@ const removeError = () => {
     }
 }
 
-inputElement.addEventListener('change', () => removeError())
-buttonElement.addEventListener('click', () => isValidIpunt())
+
+// Gerar vencedor
+
+buttonGenerateWinner.addEventListener("click", () => generateWinner());
+
+const generateWinner = () => {
+
+    const validateLengthDiv = elementDivContainer.childNodes.length === 0;
+
+    if (validateLengthDiv) {
+        return inputElement.classList.add('error');
+    }
+
+    loadingDiv.style.display="flex";
+
+    const winner = Math.floor(Math.random() * elementDivContainer.childNodes.length);
+
+
+    setTimeout(() => {
+        loadingDiv.style.display="none";
+        alert(`O ganhador foi ${elementDivContainer.childNodes[winner].firstChild.innerText}`);
+    },
+     5000)
+
+
+}
+
+inputElement.addEventListener('change', () => removeError());
+buttonElement.addEventListener('click', () => isValidIpunt());

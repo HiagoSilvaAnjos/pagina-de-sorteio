@@ -110,6 +110,7 @@ body {
     border-radius: 4px;
     color: #fff;
     transition: transform 0.7s;
+    margin-bottom: 10px;
 }
 
 .button-generate-winner:hover {
@@ -118,8 +119,28 @@ body {
     transform: scale(1.03);
 }
 
+.loading {
+    width: 90%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loading p {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.418);
+}
+
+.spin {
+    margin-top: 20px;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.849);
+}
+
 .participant-item {
-    color: rgba(255, 255, 255, 0.815);
+    color: rgba(255, 255, 255, 0.856);
     display: flex;
     align-items: center;
     justify-content: space-between;
