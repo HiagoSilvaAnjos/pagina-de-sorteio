@@ -77,11 +77,9 @@ const removeError = () => {
 
 
 // Gerar vencedor
-
 buttonGenerateWinner.addEventListener("click", () => generateWinner());
 
 const generateWinner = () => {
-
     const validateLengthDiv = elementDivContainer.childNodes.length === 0;
 
     if (validateLengthDiv) {
@@ -89,16 +87,33 @@ const generateWinner = () => {
     }
 
     loadingDiv.style.display="flex";
-
     const winner = Math.floor(Math.random() * elementDivContainer.childNodes.length);
+    const people = elementDivContainer.childNodes[winner].firstChild.innerText;
 
+    // Criar popup
+    const popup = document.querySelector('.popup-wrapper');
+    const textPeopleWinner = document.querySelector('.popup-content');
+
+    textPeopleWinner.childNodes[3].innerText = `A pessoa sorteada foi:
+    ${people} 
+    Parabens você foi o vencedor(a)`
 
     setTimeout(() => {
+        popup.style.display='block';
         loadingDiv.style.display="none";
-        alert(`O ganhador foi ${elementDivContainer.childNodes[winner].firstChild.innerText}`);
     },
      5000)
 
+     popup.addEventListener('click', event => {
+        const classNameOfClickedElement = event.target.classList[0];
+        console.log(classNameOfClickedElement)
+        const classNames = ["popup-wrapper", "bx"];
+        const shouldClosePopup = classNames.some(className => className === classNameOfClickedElement)
+
+       if (shouldClosePopup) {
+        popup.style.display='none';
+       }
+    })
 
 }
 
