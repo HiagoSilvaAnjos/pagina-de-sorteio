@@ -118,14 +118,37 @@ body {
     transform: scale(1.03);
 }
 
+.participant-item {
+    color: rgba(255, 255, 255, 0.815);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(235, 216, 216);
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.participant-item i {
+    background-color: red;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.participant-item i:hover {
+    box-shadow: 0px 0px 30px 10px rgba(255, 0, 0, 0.719);
+    transform: scale(1.05);
+}
 
 /* Utilites */
 
 .error{
     border: 2px solid red;
-    font-style: italic;
 }
 
 .error::placeholder {
     color: rgba(59, 9, 9, 0.849);
+    font-style: italic;
 }

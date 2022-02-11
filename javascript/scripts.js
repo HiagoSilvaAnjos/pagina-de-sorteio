@@ -9,12 +9,12 @@ const validateInput = () => inputElement.value.trim().length > 0;
 const isValidIpunt = () => {
     const valueInput = validateInput();
 
-    if(!valueInput) {
-       return inputElement.classList.add('error');
+    if (!valueInput) {
+        return inputElement.classList.add('error');
     }
 
     console.log(inputElement.value)
-    
+
     // Adicionar div
 
     const participantsContainer = document.createElement('div');
@@ -38,12 +38,35 @@ const isValidIpunt = () => {
     // Adicionar a div participantsContainer na div pai elementDivContainer
 
     elementDivContainer.appendChild(participantsContainer);
+
+    inputElement.value = "";
+
+    // Remover participante
+    deleteIcon.addEventListener("click", () => removeParticipant(participantsContainer, participantContent))
+
+
+    const removeParticipant = (participantsContainer, participantContent) => {
+        const participants = elementDivContainer.childNodes
+
+        for (const participantElement of participants) {
+
+            const validateClickButton = participantElement.firstChild === participantContent;
+
+            if (validateClickButton) {
+                participantsContainer.remove()
+            }
+        }
+
+    }
+
+    // Gerar vencedor
+
 }
 
 const removeError = () => {
     const valueInput = validateInput();
 
-    if(valueInput) {
+    if (valueInput) {
         return inputElement.classList.remove('error');
     }
 }
