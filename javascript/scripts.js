@@ -108,7 +108,7 @@ const generateWinner = () => {
         const classNameOfClickedElement = event.target.classList[0];
         console.log(classNameOfClickedElement)
         const classNames = ["popup-wrapper", "bx"];
-        const shouldClosePopup = classNames.some(className => className === classNameOfClickedElement)
+        const shouldClosePopup = classNames.some(className => className === classNameOfClickedElement);
 
        if (shouldClosePopup) {
         popup.style.display='none';
