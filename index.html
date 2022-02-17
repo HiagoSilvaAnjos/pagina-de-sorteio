@@ -16,14 +16,14 @@
         <h1 class="title-page">Página de Sorteio</h1>
         <p class="text-page">Adiciones os nomes para sortear o ganhador</p>
         <div class="input-add">
-            <input type="text" placeholder="Adicione os participantes..." class="input-name-people" />
+            <input type="text" maxlength="60" placeholder="Adicione os participantes..." class="input-name-people" />
             <button class="button-add-participant">Adicionar</button>
         </div>
         <div class="participants-container"></div>
         <button class="button-generate-winner">Gerar Vencedor</button>
         <div class="loading">
-            <i class='bx bx-loader bx-spin spin' ></i>
-            <p>processando...</p>
+            <div class="loader"></div>
+            <p>aguarde...</p>
         </div>
         <div class="popup-wrapper">
             <div class="popup">
@@ -31,7 +31,9 @@
                 <!-- popup -->
                 <div class="popup-content">
                     <h2>O vencedor foi:</h2>
-                    <p></p>
+                    <div class="winner">
+                       <p></p> 
+                    </div>
                 </div>
             </div>
         </div>

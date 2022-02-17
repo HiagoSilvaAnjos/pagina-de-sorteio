@@ -1,302 +1,337 @@
 * {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
 body {
-    background-color: rgba(61, 89, 124, 0.993);
-    width: 100%;
-    height: 100vh;
+  background-color: rgba(65, 134, 125, 0.747);
+  width: 100%;
+  height: 100vh;
 }
 
 .page-container {
-    margin: 50px auto;
-    width: 800px;
-    background-color: rgba(10, 23, 58, 0.63);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 4px;
-    padding: 10px;
+  margin: 50px auto;
+  width: 800px;
+  background-color: rgba(33, 74, 82, 0.836);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 .title-page {
-    font-size: 2.7em;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.863);
-    margin-top: 10px;
-    margin-bottom: 10px;
+  font-size: 2.7em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.863);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .text-page {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.884);
-    margin-bottom: 10px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.884);
+  margin-bottom: 10px;
 }
 
 .input-add {
-    background-color: rgba(7, 7, 63, 0.61);
-    padding: 20px;
-    width: 90%;
-    text-align: center;
-    border-radius: 4px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
+  background-color: #02343a;
+  padding: 20px;
+  width: 90%;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .input-name-people {
-    width: 70%;
-    height: 46px;
-    text-align: center;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.808);
-    margin-right: 20px;
+  width: 70%;
+  height: 46px;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.808);
+  margin-right: 20px;
 }
 
 .input-name-people::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .input-name-people:focus {
-    border: 1px solid rgb(2, 2, 32);
-    background-color: rgba(151, 144, 144, 0.171);
+  border: 1px solid rgb(2, 2, 32);
+  background-color: rgba(151, 144, 144, 0.171);
 }
 
 .button-add-participant {
-    font-size: 15px;
-    padding: 15px 20px;
-    border: none;
-    background-color: crimson;
-    border-radius: 4px;
-    color: #fff;
-    transition: transform 0.5s;
+  font-size: 15px;
+  padding: 15px 20px;
+  border: none;
+  background-color: rgba(75, 185, 65, 0.877);
+  border-radius: 4px;
+  color: #fff;
+  transition: transform 0.5s;
 }
 
 .button-add-participant:hover {
-    background-color: rgb(143, 5, 33);
-    transform: scale(1.05);
+  background-color: rgba(62, 212, 48, 0.877);
+  transform: scale(1.03);
 }
 
 .participants-container {
-    color: #FFF;
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    width: 90%;
-    border-radius: 4px;
-    background-color: rgba(7, 7, 63, 0.61);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-.button-generate-winner {
-    font-size: 15px;
-    padding: 15px 20px;
-    border: none;
-    background-color: rgb(45, 105, 37);
-    border-radius: 4px;
-    color: #fff;
-    transition: transform 0.7s;
-    margin-bottom: 10px;
-}
-
-.button-generate-winner:hover {
-    background-color: rgb(37, 128, 25);
-    box-shadow: 0px 5px 30px 10px rgba(45, 117, 16, 0.596);
-    transform: scale(1.03);
-}
-
-.loading {
-    width: 90%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.loading p {
-    margin-top: 3px;
-    margin-bottom: 5px;
-    color: rgba(255, 255, 255, 0.418);
-}
-
-.spin {
-    margin-top: 20px;
-    font-size: 50px;
-    color: rgba(255, 255, 255, 0.849);
+  color: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 90%;
+  border-radius: 4px;
+  background-color: #02343a;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .participant-item {
-    color: rgba(255, 255, 255, 0.856);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid rgba(255, 251, 251, 0.781);
-    padding: 10px;
-    border-radius: 4px;
-    margin: 10px 0;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.884);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding: 8px;
+  margin: 8px 0;
 }
 
 .participant-item i {
-    background-color: rgb(255, 0, 0);
-    padding: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.5s;
+  background-color: rgba(51, 209, 77, 0.486);
+  font-size: 22px;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.5s;
 }
 
 .participant-item i:hover {
-    background-color: rgba(255, 0, 0, 0.575);
-    color: rgba(255, 255, 255, 0.562);
-    transform: scale(1.07);
+  color: rgb(255, 0, 0);
+}
+
+.button-generate-winner {
+  font-size: 15px;
+  padding: 15px 20px;
+  border: none;
+  background-color: rgb(52, 134, 41);
+  border-radius: 4px;
+  color: #fff;
+  transition: transform 0.7s;
+  margin-bottom: 10px;
+}
+
+.button-generate-winner:hover {
+  background-color: rgb(37, 128, 25);
+  transform: scale(1.03);
+}
+
+.loading {
+  width: 90%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loading p {
+  margin-top: 3px;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.418);
+}
+
+.loader {
+  margin: 20px 0px 10px;
+  border: 8px solid #e5ece9;
+  border-radius: 50%;
+  border-top: 8px solid #026873;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 0.5s linear infinite; /* Safari */
+  animation: spin 0.5s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Utilites */
 
-.error{
-    border: 2px solid red;
+.error {
+  border: 2px solid red;
 }
 
 .error::placeholder {
-    color: rgba(59, 9, 9, 0.849);
-    font-style: italic;
+  color: rgba(59, 9, 9, 0.849);
+  font-style: italic;
 }
 
 /* Popup */
 
 .popup-wrapper {
-    display: none;
-    background-color: rgba(0, 0, 0, .5);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .popup {
-    height: 250px;
-    font-family: arial,sans-serif;
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 4px;
-    background-color: rgb(6, 66, 68);
-    position: relative;
-    animation: slideResult 2s;
+  overflow: hidden;
+  height: 250px;
+  font-family: arial, sans-serif;
+  text-align: center;
+  width: 380px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #025940;
+  position: relative;
+  animation: slideResult 2s;
+}
+
+.popup .popup-content h2 {
+  color: rgb(255, 255, 255);
+}
+
+.popup .popup-content .winner {
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255, 0.15);
+  color: rgb(255, 255, 255);
 }
 
 @keyframes slideResult {
-    from {
-        transform: translateY(100px)
-    }
-    to {
-        transform: translateY(0px)
-    }
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
-.popup-close i{
-    font-size: 25px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 4px;
-    color: #fff;
-    border: 1px solid rgb(201, 192, 192);
-    transition: transform 0.3s;
+.popup-close i {
+  font-size: 25px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid rgb(201, 192, 192);
+  transition: transform 0.3s;
 }
 
 .popup-close i:hover {
-    transform: scale(1.05);
-    background-color: rgb(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  background-color: rgb(255, 255, 255, 0.15);
 }
 
 .popup h2 {
-    color: rgba(255, 255, 255, 0.801);
-    font-size: 2em;
-    margin-top: 40px;
-    margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.801);
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .popup p {
-    color: rgba(255, 255, 255, 0.801);
-    font-size: 1.3em;
+  color: rgba(255, 255, 255, 0.801);
+  font-size: 1.3em;
 }
-
 
 /* Responsividade */
 
 @media (max-width: 820px) {
-    .page-container {
-        width: 90%;
-        padding: 20px 0;
-    }
+  .page-container {
+    width: 90%;
+    padding: 20px 0;
+  }
 
-    .input-name-people {
-        width: 100%;
-    }
+  .input-name-people {
+    width: 100%;
+  }
 
-    .button-add-participant {
-        margin-top: 15px;
-        width: 100%;
-        font-size: 14px;
-    }
+  .button-add-participant {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 14px;
+  }
 
-    .popup {
-        margin: 20% auto;
-    }
+  .popup {
+    margin: 20% auto;
+  }
 
-    .button-generate-winner {
-        width: 80%;
-    }
+  .button-generate-winner {
+    width: 80%;
+  }
 }
 
 @media (max-width: 500px) {
-    .title-page {
-        font-size: 2em;
-    }
+  .title-page {
+    font-size: 2em;
+  }
 
-    .text-page {
-        font-size: 15px;
-    }
+  .text-page {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 450px) {
-    .popup {
-        margin: 50% auto;
-    }
+  .popup {
+    margin: 40% auto;
+    width: 80%;
+  }
 }
 
 @media (max-width: 300px) {
-    .title-page {
-        font-size: 1.5em;
-    }
+  .title-page {
+    font-size: 1.5em;
+  }
 
-    .text-page {
-        font-size: 10px;
-    }
+  .text-page {
+    font-size: 10px;
+  }
 
-    .input-name-people::placeholder {
-        font-size: 16px;
-    }
+  .input-name-people::placeholder {
+    font-size: 16px;
+  }
 
-    .popup {
-        max-width: 270px;
-        height: 300px;
-    }
+  .popup {
+    max-width: 270px;
+    height: 300px;
+  }
 }
-

@@ -29,7 +29,7 @@ const isValidIpunt = () => {
     // Adicionando iconi de lixeira
     const deleteIcon = document.createElement('i');
     deleteIcon.classList.add('bx');
-    deleteIcon.classList.add('bxs-trash-alt');
+    deleteIcon.classList.add('bxs-trash');
 
     // Adicionar tudo na div participantsContainer
     participantsContainer.appendChild(participantContent);
@@ -94,9 +94,7 @@ const generateWinner = () => {
     const popup = document.querySelector('.popup-wrapper');
     const textPeopleWinner = document.querySelector('.popup-content');
 
-    textPeopleWinner.childNodes[3].innerText = `A pessoa sorteada foi:
-    ${people} 
-    Parabens você foi o vencedor(a)`
+    textPeopleWinner.childNodes[3].innerText = `${people}`
 
     setTimeout(() => {
         popup.style.display='block';
