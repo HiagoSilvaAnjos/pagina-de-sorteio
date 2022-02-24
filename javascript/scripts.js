@@ -15,8 +15,6 @@ const isValidIpunt = () => {
         return inputElement.classList.add('error');
     }
 
-    console.log(inputElement.value);
-
     // Adicionar div
 
     const participantsContainer = document.createElement('div');
@@ -35,10 +33,7 @@ const isValidIpunt = () => {
     participantsContainer.appendChild(participantContent);
     participantsContainer.appendChild(deleteIcon);
 
-    console.log(participantsContainer);
-
     // Adicionar a div participantsContainer na div pai elementDivContainer
-
     elementDivContainer.appendChild(participantsContainer);
 
     inputElement.value = "";
@@ -57,7 +52,6 @@ const isValidIpunt = () => {
         for (const participantElement of participants) {
 
             const validateClickButton = participantElement.firstChild === participantContent;
-
             if (validateClickButton) {
                 participantsContainer.remove();
             }
@@ -82,19 +76,28 @@ buttonGenerateWinner.addEventListener("click", () => generateWinner());
 const generateWinner = () => {
     const validateLengthDiv = elementDivContainer.childNodes.length === 0;
 
+    // retornar a mensagem de error se nenhum nome foi inserido
     if (validateLengthDiv) {
         return inputElement.classList.add('error');
     }
 
     loadingDiv.style.display="flex";
+
     const winner = Math.floor(Math.random() * elementDivContainer.childNodes.length);
+   
     const people = elementDivContainer.childNodes[winner].firstChild.innerText;
 
     // Criar popup
     const popup = document.querySelector('.popup-wrapper');
     const textPeopleWinner = document.querySelector('.popup-content');
 
-    textPeopleWinner.childNodes[3].innerText = `${people}`
+    // pegar o parágrafo dentro da div popup-content
+    console.log(textPeopleWinner.childNodes);
+    console.log(textPeopleWinner.childNodes[3])
+    console.log(textPeopleWinner.childNodes[3].childNodes[0]);
+    const popupText = textPeopleWinner.childNodes[3].childNodes[0];
+
+    popupText.innerText = `${people}`
 
     setTimeout(() => {
         popup.style.display='block';
@@ -102,7 +105,7 @@ const generateWinner = () => {
     },
      5000)
 
-     popup.addEventListener('click', event => {
+     popup.addEventListener('click', (event) => {
         const classNameOfClickedElement = event.target.classList[0];
         console.log(classNameOfClickedElement)
         const classNames = ["popup-wrapper", "bx"];
