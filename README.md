@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/91165415/155786210-af538a82-ab8c-4e58-
     <br>
     Apos inserir os nomes para o sorteio, basta clicar no botão que automaticamente aparece um carregador bem legal! depois de carregar o carregador é fechado e surgirá um popup revelando o vencedor. <br>
     O usuário poderá fechar esse popup clicando no íconi de saida na parte superior ou em qualquer parte da tela. <br>
-    Veja este projeto <a href="http://hiagosilvaanjos.github.io/lista-de-tarefas">clicando aqui</a>.
+    Veja este projeto <a href="http://hiagosilvaanjos.github.io/pagina-de-sorteio">clicando aqui</a>.
 
 </p>
 
